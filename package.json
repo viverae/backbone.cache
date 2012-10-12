@@ -1,0 +1,22 @@
+{
+  "name"            : "or-cachejs",
+  "description"     : "Internal Cache Lib",
+  "version"         : "0.1.0",
+  "author"          : {
+    "name"  : "Chris Miller",
+    "email" : "cmiller@onehealth.com",
+    "url"   : "http://onehealth.com/"
+  },
+  "repository"      : {
+    "type" : "git",
+    "url"  : "git://git@git.onehealth.com:2022/or-cachejs.git"
+  },
+  "scripts"         : {
+    "test" : "grunt jasmine"
+  },
+  "devDependencies" : {
+    "grunt-jasmine-runner" : "latest",
+    "grunt"                : "~0.3.16",
+    "grunt-open"           : "~0.1.0"
+  }
+}
