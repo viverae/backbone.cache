@@ -1,5 +1,5 @@
 {
-  "name"            : "or-cachejs",
+  "name"            : "cachejs",
   "description"     : "Internal Cache Lib",
   "version"         : "0.1.0",
   "author"          : {

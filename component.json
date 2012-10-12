@@ -1,5 +1,5 @@
 {
-  "name"         : "or-cachejs",
+  "name"         : "cachejs",
   "version"      : "0.0.1",
   "main"         : "./src/cache.js",
   "dependencies" : {
