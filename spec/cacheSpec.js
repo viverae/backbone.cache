@@ -1,4 +1,4 @@
-/*globals Backbone,  beforeEach, $, _, require, jasmine, describe, it, expect, loadFixtures*/
+/*globals Backbone,  beforeEach, $, _, require, jasmine, describe, it, expect, loadFixtures, base64*/
 
 describe("Cache", function () {
   "use strict";
@@ -12,6 +12,7 @@ describe("Cache", function () {
       'foo' : 'Zm9v',
       '!@#@*#&*@#$*@#$!' : 'IUAjQCojJipAIyQqQCMkIQ--'
     };
+    Backbone.Cache.setEncoder(base64);
   });
 
   it("Should Be Attached to Backbone.Cache", function() {
@@ -57,6 +58,31 @@ describe("Cache", function () {
     Backbone.Cache.set("testSet", base64map);
     Backbone.Cache.flush();
     expect(Backbone.Cache.get("testSet")).toBeNull();
+  });
+
+  it("Should Throw Error If Scramble Is Set without Encoder", function() {
+    Backbone.Cache.encoder = null;
+    Backbone.Cache.setScramble(true);
+
+    var error;
+
+    try { Backbone.Cache.scramble('test');}
+    catch(e) { error = e; }
+
+    expect(error).not.toBeNull(error);
+  });
+
+
+  it("Should Throw Error If Scramble Is Set without Decoder", function() {
+    Backbone.Cache.encoder = null;
+    Backbone.Cache.setScramble(true);
+
+    var error;
+
+    try { Backbone.Cache.unscramble('test');}
+    catch(e) { error = e; }
+
+    expect(error).not.toBeNull(error);
   });
 
 });

@@ -30,17 +30,19 @@
     },
 
     scramble : function(string) {
-      if (!_.isFunction(this.encoder.encode)) {
-        return throw new Error("Cache Encoder Not Set");
+      if (!this.encoder || (this.encoder && !_.isFunction(this.encoder.encode))) {
+        throw new Error("Cache Encoder Not Set");
+      } else {
+        return this.encoder.encode(string);
       }
-      return this.encoder.encode(string);
     },
 
     unscramble : function(string) {
-      if (!_.isFunction(this.encoder.decode)) {
-        return throw new Error("Cache Decoder Not Set");
+      if (!this.encoder || (this.encoder && !_.isFunction(this.encoder.decode))) {
+        throw new Error("Cache Decoder Not Set");
+      } else {
+        return this.encoder.decode(string);
       }
-      return this.encoder.decode(string);
     },
 
     get : function(key, forceNew) {

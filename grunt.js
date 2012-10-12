@@ -84,6 +84,7 @@ module.exports = function (grunt) {
         'vendor/jquery.store.js',
         'vendor/underscore.js',
         'vendor/backbone.js',
+        'vendor/base64.js',
         'src/cache.js'
       ],
       helpers : 'spec/helpers/*.js',
