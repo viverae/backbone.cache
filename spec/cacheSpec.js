@@ -1,4 +1,4 @@
-/*globals Backbone,  beforeEach, $, require, jasmine, describe, it, expect, loadFixtures*/
+/*globals Backbone,  beforeEach, $, _, require, jasmine, describe, it, expect, loadFixtures*/
 
 describe("Cache", function () {
   "use strict";
