@@ -3,7 +3,8 @@
   "version"      : "0.0.1",
   "main"         : "./src/cache.js",
   "dependencies" : {
-    "backbone" : "*"
+    "backbone" : "*",
+    "base64" : "ssh+git://git@git.onehealth.com:2022/base64js.git"
   }
 }
 
