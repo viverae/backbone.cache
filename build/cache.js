@@ -6,7 +6,7 @@
 ;(function (root, factory) {
   "use strict";
   if (typeof define === 'function' && define.amd) {
-    define(['backbone', 'jquery', '.', 'jquery.store'], factory);
+    define(['backbone', 'jquery', 'underscore', 'jquery.store'], factory);
   } else {
     root.Backbone.Cache = factory(root.Backbone, root.jQuery, root._);
   }
