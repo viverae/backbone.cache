@@ -10,13 +10,13 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         src  : ['<banner:meta.banner>', 'src/cache.js'],
-        dest : 'build/cache.js'
+        dest : 'dist/cache.js'
       }
     },
     min    : {
       dist: {
         src  : ['<banner:meta.banner>', '<config:concat.dist.dest>'],
-        dest : 'build/cache.min.js'
+        dest : 'dist/cache.min.js'
       }
     },
     lint   : {
