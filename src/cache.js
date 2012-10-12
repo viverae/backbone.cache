@@ -4,11 +4,11 @@
 ;(function (root, factory) {
   "use strict";
   if (typeof define === 'function' && define.amd) {
-    define(['backbone', 'jquery', 'underscore', 'base64', 'jquery.store'], factory);
+    define(['backbone', 'jquery', 'underscore', 'jquery.store'], factory);
   } else {
-    root.Backbone.Cache = factory(root.Backbone, root.jQuery, root._, base64);
+    root.Backbone.Cache = factory(root.Backbone, root.jQuery, root._);
   }
-}(this, function (Backbone, $, _, base64) {
+}(this, function (Backbone, $, _) {
   "use strict";
 
   var Cache = {
@@ -17,15 +17,12 @@
 
     store : new $.store(),
 
-    encoders : {base64 : base64},
-
-    encoder : 'base64',
-
     scrambled : false,
 
-    setEncoder : function(key) {
-      //Allow Default base64 Encoding
-      if (this.encoders[key]) this.encoder = key;
+    encoder : null,
+
+    setEncoder : function(encoder) {
+      if (_.isObject(encoder)) this.encoder = encoder;
     },
 
     setScramble : function(bool) {
@@ -33,11 +30,17 @@
     },
 
     scramble : function(string) {
-      return this.encoders[this.encoder].encode(string);
+      if (!_.isFunction(this.encoder.encode)) {
+        return throw new Error("Cache Encoder Not Set");
+      }
+      return this.encoder.encode(string);
     },
 
     unscramble : function(string) {
-      return this.encoders[this.encoder].decode(string);
+      if (!_.isFunction(this.encoder.decode)) {
+        return throw new Error("Cache Decoder Not Set");
+      }
+      return this.encoder.decode(string);
     },
 
     get : function(key, forceNew) {
