@@ -38,26 +38,26 @@ describe("Cache", function () {
   });
 
   it("Should Cache An unscrambled Key -> Value pair (set)", function() {
-    Backbone.Cache.set("testSet", base64map);
-    expect(Backbone.Cache.get("testSet")).toEqual(base64map);
+    Backbone.Cache.setItem("testSet", base64map);
+    expect(Backbone.Cache.getItem("testSet")).toEqual(base64map);
   });
 
   it("Should Remove A Key -> Value pair from Cache (unset)", function() {
-    Backbone.Cache.set("testSet", base64map);
-    Backbone.Cache.unset("testSet");
-    expect(Backbone.Cache.get("testSet")).toBeNull();
+    Backbone.Cache.setItem("testSet", base64map);
+    Backbone.Cache.removeItem("testSet");
+    expect(Backbone.Cache.getItem("testSet")).toBeNull();
   });
 
-  it("Should Remove A Key -> Value pair from Cache (del)", function() {
-    Backbone.Cache.set("testSet", base64map);
-    Backbone.Cache.del("testSet");
-    expect(Backbone.Cache.get("testSet")).toBeNull();
+  it("Should Remove A Key -> Value pair from Cache (removeItem)", function() {
+    Backbone.Cache.setItem("testSet", base64map);
+    Backbone.Cache.removeItem("testSet");
+    expect(Backbone.Cache.getItem("testSet")).toBeNull();
   });
 
   it("Should Flush Cache", function() {
-    Backbone.Cache.set("testSet", base64map);
+    Backbone.Cache.setItem("testSet", base64map);
     Backbone.Cache.flush();
-    expect(Backbone.Cache.get("testSet")).toBeNull();
+    expect(Backbone.Cache.getItem("testSet")).toBeNull();
   });
 
   it("Should Throw Error If Scramble Is Set without Encoder", function() {
