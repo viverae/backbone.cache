@@ -45,7 +45,7 @@
       }
     },
 
-    get : function(key, forceNew) {
+    getItem : function(key, forceNew) {
       var val =  this.cache.get(key);
       if (!val || forceNew) {
         if (this.scrambled) {
@@ -66,7 +66,7 @@
       return val;
     },
 
-    set : function(key, val) {
+    setItem : function(key, val) {
       if (this.isScrambled) {
         this.store.set(this.scramble(key), this.scramble(JSON.stringify(val)));
       } else {
@@ -76,14 +76,9 @@
       return val;
     },
 
-    unset : function(key) {
+    removeItem : function(key) {
       this.cache.unset(key);
       this.store.del(this.isScrambled ? this.scramble(key) : key);
-    },
-
-    //Backwards Compat
-    del : function(key) {
-      this.unset(key);
     },
 
     flush : function() {
