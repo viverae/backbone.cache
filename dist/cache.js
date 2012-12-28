@@ -89,6 +89,11 @@
     }
   };
 
+  //Alias'
+  Cache.set = Cache.setItem;
+  Cache.get = Cache.getItem;
+  Cache.unset = Cache.removeItem;
+
   (function() {
     //Not Sure If We Should Expose These?
     Cache.store.driver.scope = 'browser';
