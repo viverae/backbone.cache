@@ -1,4 +1,4 @@
-/*! cachejs - v0.1.1 - 2012-12-28 */
+/*! cachejs - v0.1.2 - 2012-12-28 */
 
 /*jshint*/
 /*global Backbone, define, console */
