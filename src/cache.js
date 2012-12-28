@@ -26,7 +26,7 @@
     },
 
     setScramble : function(bool) {
-      if (_.isBoolean(bool)) this.isScrambled = bool;
+      if (_.isBoolean(bool)) this.scrambled = bool;
     },
 
     scramble : function(string) {
@@ -67,7 +67,7 @@
     },
 
     setItem : function(key, val) {
-      if (this.isScrambled) {
+      if (this.scrambled) {
         this.store.set(this.scramble(key), this.scramble(JSON.stringify(val)));
       } else {
         this.store.set(key, val);
@@ -78,7 +78,7 @@
 
     removeItem : function(key) {
       this.cache.unset(key);
-      this.store.del(this.isScrambled ? this.scramble(key) : key);
+      this.store.del(this.scrambled ? this.scramble(key) : key);
     },
 
     flush : function() {
