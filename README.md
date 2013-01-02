@@ -16,22 +16,22 @@ This Implementation Relies on the following libraries:
 
 Methods :
 
-  - setEncoder(encoder)
+  - `setEncoder(encoder)`
     Set The Encoder for the cache bucket
 
-  - setScramble(boolean)
+  - `setScramble(boolean)`
     Set The Cache to be scrambled (encoded) or not
 
-  - getItem(key) - alias (get)
+  - `getItem(key)` - alias (get)
     get a single item from localStorage
 
-  - setItem(key, value) - alias (set)
+  - `setItem(key, value)` - alias (set)
     set a single item to localStorage
 
-  - removeItem(key) - alias (unset)
+  - `removeItem(key)` - alias (unset)
     remove a single item from localStorage
 
-  - flush
+  - `flush`
     Flush all persistent localStorage
 
 ###AMD
