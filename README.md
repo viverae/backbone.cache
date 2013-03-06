@@ -49,3 +49,9 @@ define(['backbone.cache', 'base64'], function(cache, base64) {
     var foo = cache.getItem('foo');
 }
 ```
+
+## License
+
+Copyright OneHealth Solutions, Inc
+
+Licensed under the Apache 2.0 license.
