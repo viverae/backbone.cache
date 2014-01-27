@@ -1,22 +1,27 @@
 {
-  "name"            : "cachejs",
-  "description"     : "Internal Cache Lib",
-  "version"         : "0.1.2",
-  "author"          : {
-    "name"  : "Chris Miller",
-    "email" : "cmiller@onehealth.com",
-    "url"   : "http://onehealth.com/"
+  "name": "cachejs",
+  "description": "Internal Cache Lib",
+  "version": "0.1.3",
+  "author": {
+    "name": "Chris Miller",
+    "email": "cmiller@onehealth.com",
+    "url": "http://onehealth.com/"
   },
-  "repository"      : {
-    "type" : "git",
-    "url"  : "git://git@git.onehealth.com:2022/or-cachejs.git"
+  "repository": {
+    "type": "git",
+    "url": "git://git@git.onehealth.com:2022/or-cachejs.git"
   },
-  "scripts"         : {
-    "test" : "grunt jasmine"
+  "scripts": {
+    "test": "grunt jasmine"
   },
-  "devDependencies" : {
-    "grunt-jasmine-runner" : "latest",
-    "grunt"                : "~0.3.16",
-    "grunt-open"           : "~0.1.0"
+  "dependencies": {
+    "grunt": "~0.4.2",
+    "grunt-cli": "~0.1.13",
+    "grunt-open": "~0.2.3",
+    "grunt-contrib-jshint": "~0.8.0",
+    "grunt-contrib-jasmine": "~0.5.2",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-uglify": "~0.3.2"
   }
 }

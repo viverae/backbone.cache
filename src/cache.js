@@ -1,4 +1,3 @@
-/*jshint*/
 /*global Backbone, define, console */
 
 ;(function (root, factory) {

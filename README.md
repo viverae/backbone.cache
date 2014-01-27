@@ -50,6 +50,18 @@ define(['backbone.cache', 'base64'], function(cache, base64) {
 }
 ```
 
+
+## Release History
+
+ * 2014-01-27   v0.1.3   Updated Build / Dependencies
+ * 2013-12-28   v0.1.2   Fixed Variable Typo
+ * 2013-10-12   v0.1.1   Repo Name Change
+ * 2013-10-11   v0.1.0   Initial Release
+
+---
+
+
+
 ## License
 
 Copyright OneHealth Solutions, Inc

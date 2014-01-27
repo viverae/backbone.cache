@@ -1,6 +1,3 @@
-/*! cachejs - v0.1.2 - 2012-12-28 */
-
-/*jshint*/
 /*global Backbone, define, console */
 
 ;(function (root, factory) {
