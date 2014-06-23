@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://git@git.onehealth.com:2022/or-cachejs.git"
+    "url": "git@github.com:onehealth/backbone.cache.git"
   },
   "scripts": {
     "test": "grunt jasmine"
@@ -18,10 +18,10 @@
     "grunt": "~0.4.2",
     "grunt-cli": "~0.1.13",
     "grunt-open": "~0.2.3",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-jasmine": "~0.5.2",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-uglify": "~0.3.2"
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-jasmine": "~0.6.5",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-uglify": "~0.5.0"
   }
 }

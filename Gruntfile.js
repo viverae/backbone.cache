@@ -29,16 +29,17 @@ module.exports = function (grunt) {
     jasmine : {
       test : {
         src     : [
-          'vendor/jquery-1.8.2.js',
-          'vendor/jquery.store.js',
-          'vendor/underscore.js',
-          'vendor/backbone.js',
-          'vendor/base64.js',
           'src/cache.js'
         ],
         options : {
           specs   : 'spec/**/*Spec.js',
-          helpers : 'spec/helpers/*.js'
+          vendor : [
+            'vendor/jquery-1.8.2.js',
+            'vendor/jquery.store.js',
+            'vendor/underscore.js',
+            'vendor/backbone.js',
+            'vendor/base64.js'
+          ]
         }
       }
     }
