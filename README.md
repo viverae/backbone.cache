@@ -1,4 +1,4 @@
-# Backbone-Cache
+# Backbone-Cache [![Build Status](https://travis-ci.org/onehealth/backbone.cache.png?branch=master)](https://travis-ci.org/onehealth/backbone.cache) 
 
 > Simple Backbone Persistent LocalStorage Cache
 
