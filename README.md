@@ -64,6 +64,8 @@ define(['backbone.cache', 'base64'], function(cache, base64) {
 
 ## License
 
-Copyright OneHealth Solutions, Inc
+Copyright (c) 2013-2014 OneHealth Solutions, Inc
+
+Copyright (c) 2014-2015 Viverae, Inc
 
 Licensed under the Apache 2.0 license.
